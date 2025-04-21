@@ -2,7 +2,7 @@
   "ROOTURL": "https://reqres.in",
   "test_cases": [
     {
-      "name": "Fetch resource list",
+      "name": "获取资源列表",
       "category": "resource",
       "method": "GET",
       "url": "/api/resource",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "name": "Fetch user list",
+      "name": "获取用户列表",
       "category": "user",
       "method": "GET",
       "url": "/api/users",
@@ -62,7 +62,7 @@
       }
     },
     {
-      "name": "Fetch a specific user",
+      "name": "获取特定用户",
       "category": "user",
       "method": "GET",
       "url": "/api/users/2",
@@ -79,7 +79,7 @@
       }
     },
     {
-      "name": "Update a user using PUT",
+      "name": "使用PUT更新用户",
       "category": "user",
       "method": "PUT",
       "url": "/api/users/2",
@@ -95,7 +95,7 @@
       }
     },
     {
-      "name": "Update a user using PATCH",
+      "name": "使用PATCH更新用户",
       "category": "user",
       "method": "PATCH",
       "url": "/api/users/2",
@@ -111,7 +111,7 @@
       }
     },
     {
-      "name": "Delete a user",
+      "name": "删除用户",
       "category": "user",
       "method": "DELETE",
       "url": "/api/users/2",
@@ -120,7 +120,7 @@
       "expected_response": null
     },
     {
-      "name": "Fetch an unknown resource",
+      "name": "获取未知的资源",
       "category": "resource",
       "method": "GET",
       "url": "/api/resource/23",
@@ -129,7 +129,7 @@
       "expected_response": {}
     },
     {
-      "name": "Create a session (login)",
+      "name": "创建登录会话",
       "category": "login",
       "method": "POST",
       "url": "/api/login",
@@ -143,7 +143,7 @@
       }
     },
     {
-      "name": "Login with invalid credentials",
+      "name": "使用无效凭据登录",
       "category": "login",
       "method": "POST",
       "url": "/api/login",
@@ -157,7 +157,7 @@
       }
     },
     {
-      "name": "Register a new user",
+      "name": "注册一个新用户",
       "category": "registration",
       "method": "POST",
       "url": "/api/register",
@@ -172,7 +172,7 @@
       }
     },
     {
-      "name": "Register with missing password",
+      "name": "密码缺失的注册",
       "category": "registration",
       "method": "POST",
       "url": "/api/register",
@@ -185,7 +185,7 @@
       }
     },
     {
-      "name": "End a session (logout)",
+      "name": "退出结束会话",
       "category": "logout",
       "method": "POST",
       "url": "/api/logout",
