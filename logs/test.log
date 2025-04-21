@@ -10,3 +10,544 @@
 2025-04-21 16:18:55,339 - INFO - 正在运行用例: Login with invalid credentials
 2025-04-21 16:23:43,537 - INFO - 正在运行用例: Create a session (login)
 2025-04-21 16:23:44,071 - INFO - 正在运行用例: Login with invalid credentials
+2025-04-21 16:59:11,925 - INFO - 正在运行用例: Create a session (login)
+2025-04-21 16:59:12,427 - INFO - 正在运行用例: Login with invalid credentials
+2025-04-21 17:01:35,216 - INFO - 正在运行用例: Create a session (login)
+2025-04-21 17:01:35,733 - INFO - 正在运行用例: Login with invalid credentials
+2025-04-21 17:03:30,803 - INFO - 正在运行用例: Fetch user list
+2025-04-21 17:03:30,980 - ERROR - Request failed with error: ('Response content mismatch.
+  Expected: {
+    "page": 1,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+      {
+        "id": 1,
+        "email": "george.bluth@reqres.in",
+        "first_name": "George",
+        "last_name": "Bluth",
+        "avatar": "https://reqres.in/img/faces/1-image.jpg"
+      },
+      {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+      }
+    ]
+  }
+  Got: {
+    "page": 1,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+      {
+        "id": 1,
+        "email": "george.bluth@reqres.in",
+        "first_name": "George",
+        "last_name": "Bluth",
+        "avatar": "https://reqres.in/img/faces/1-image.jpg"
+      },
+      {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+      },
+      {
+        "id": 3,
+        "email": "emma.wong@reqres.in",
+        "first_name": "Emma",
+        "last_name": "Wong",
+        "avatar": "https://reqres.in/img/faces/3-image.jpg"
+      },
+      {
+        "id": 4,
+        "email": "eve.holt@reqres.in",
+        "first_name": "Eve",
+        "last_name": "Holt",
+        "avatar": "https://reqres.in/img/faces/4-image.jpg"
+      },
+      {
+        "id": 5,
+        "email": "charles.morris@reqres.in",
+        "first_name": "Charles",
+        "last_name": "Morris",
+        "avatar": "https://reqres.in/img/faces/5-image.jpg"
+      },
+      {
+        "id": 6,
+        "email": "tracey.ramos@reqres.in",
+        "first_name": "Tracey",
+        "last_name": "Ramos",
+        "avatar": "https://reqres.in/img/faces/6-image.jpg"
+      }
+    ],
+    "support": {
+      "url": "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+      "text": "Tired of writing endless social media content? Let Content Caddy generate it for you."
+    }
+  }', 'Failed to parse response as JSON.')
+assert {'page': 1, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 1, 'email': 'george.bluth@reqres.in', 'first_name': 'George', 'last_name': 'Bluth', 'avatar': 'https://reqres.in/img/faces/1-image.jpg'}, {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}, {'id': 3, 'email': 'emma.wong@reqres.in', 'first_name': 'Emma', 'last_name': 'Wong', 'avatar': 'https://reqres.in/img/faces/3-image.jpg'}, {'id': 4, 'email': 'eve.holt@reqres.in', 'first_name': 'Eve', 'last_name': 'Holt', 'avatar': 'https://reqres.in/img/faces/4-image.jpg'}, {'id': 5, 'email': 'charles.morris@reqres.in', 'first_name': 'Charles', 'last_name': 'Morris', 'avatar': 'https://reqres.in/img/faces/5-image.jpg'}, {'id': 6, 'email': 'tracey.ramos@reqres.in', 'first_name': 'Tracey', 'last_name': 'Ramos', 'avatar': 'https://reqres.in/img/faces/6-image.jpg'}], 'support': {'url': 'https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral', 'text': 'Tired of writing endless social media content? Let Content Caddy generate it for you.'}} == {'page': 1, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 1, 'email': 'george.bluth@reqres.in', 'first_name': 'George', 'last_name': 'Bluth', 'avatar': 'https://reqres.in/img/faces/1-image.jpg'}, {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}]}
+  
+  Common items:
+  {'page': 1, 'per_page': 6, 'total': 12, 'total_pages': 2}
+  Differing items:
+  {'data': [{'avatar': 'https://reqres.in/img/faces/1-image.jpg', 'email': 'george.bluth@reqres.in', 'first_name': 'Geor...: 'https://reqres.in/img/faces/6-image.jpg', 'email': 'tracey.ramos@reqres.in', 'first_name': 'Tracey', 'id': 6, ...}]} != {'data': [{'avatar': 'https://reqres.in/img/faces/1-image.jpg', 'email': 'george.bluth@reqres.in', 'first_name': 'Geor...': 'https://reqres.in/img/faces/2-image.jpg', 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'id': 2, ...}]}
+  Left contains 1 more item:
+  {'support': {'text': 'Tired of writing endless social media content? Let '
+                       'Content Caddy generate it for you.',
+               'url': 'https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral'}}
+  
+  Full diff:
+    {
+        'data': [
+            {
+                'avatar': 'https://reqres.in/img/faces/1-image.jpg',
+                'email': 'george.bluth@reqres.in',
+                'first_name': 'George',
+                'id': 1,
+                'last_name': 'Bluth',
+            },
+            {
+                'avatar': 'https://reqres.in/img/faces/2-image.jpg',
+                'email': 'janet.weaver@reqres.in',
+                'first_name': 'Janet',
+                'id': 2,
+                'last_name': 'Weaver',
+            },
+  +         {
+  +             'avatar': 'https://reqres.in/img/faces/3-image.jpg',
+  +             'email': 'emma.wong@reqres.in',
+  +             'first_name': 'Emma',
+  +             'id': 3,
+  +             'last_name': 'Wong',
+  +         },
+  +         {
+  +             'avatar': 'https://reqres.in/img/faces/4-image.jpg',
+  +             'email': 'eve.holt@reqres.in',
+  +             'first_name': 'Eve',
+  +             'id': 4,
+  +             'last_name': 'Holt',
+  +         },
+  +         {
+  +             'avatar': 'https://reqres.in/img/faces/5-image.jpg',
+  +             'email': 'charles.morris@reqres.in',
+  +             'first_name': 'Charles',
+  +             'id': 5,
+  +             'last_name': 'Morris',
+  +         },
+  +         {
+  +             'avatar': 'https://reqres.in/img/faces/6-image.jpg',
+  +             'email': 'tracey.ramos@reqres.in',
+  +             'first_name': 'Tracey',
+  +             'id': 6,
+  +             'last_name': 'Ramos',
+  +         },
+        ],
+        'page': 1,
+        'per_page': 6,
+  +     'support': {
+  +         'text': 'Tired of writing endless social media content? Let Content Caddy '
+  +         'generate it for you.',
+  +         'url': 'https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral',
+  +     },
+        'total': 12,
+        'total_pages': 2,
+    }
+2025-04-21 17:03:30,987 - ERROR - Request failed with error: ('Response content mismatch.
+  Expected: {
+    "page": 1,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+      {
+        "id": 1,
+        "email": "george.bluth@reqres.in",
+        "first_name": "George",
+        "last_name": "Bluth",
+        "avatar": "https://reqres.in/img/faces/1-image.jpg"
+      },
+      {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+      }
+    ]
+  }
+  Got: {
+    "page": 1,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+      {
+        "id": 1,
+        "email": "george.bluth@reqres.in",
+        "first_name": "George",
+        "last_name": "Bluth",
+        "avatar": "https://reqres.in/img/faces/1-image.jpg"
+      },
+      {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+      },
+      {
+        "id": 3,
+        "email": "emma.wong@reqres.in",
+        "first_name": "Emma",
+        "last_name": "Wong",
+        "avatar": "https://reqres.in/img/faces/3-image.jpg"
+      },
+      {
+        "id": 4,
+        "email": "eve.holt@reqres.in",
+        "first_name": "Eve",
+        "last_name": "Holt",
+        "avatar": "https://reqres.in/img/faces/4-image.jpg"
+      },
+      {
+        "id": 5,
+        "email": "charles.morris@reqres.in",
+        "first_name": "Charles",
+        "last_name": "Morris",
+        "avatar": "https://reqres.in/img/faces/5-image.jpg"
+      },
+      {
+        "id": 6,
+        "email": "tracey.ramos@reqres.in",
+        "first_name": "Tracey",
+        "last_name": "Ramos",
+        "avatar": "https://reqres.in/img/faces/6-image.jpg"
+      }
+    ],
+    "support": {
+      "url": "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+      "text": "Tired of writing endless social media content? Let Content Caddy generate it for you."
+    }
+  }', 'Failed to parse response as JSON.')
+assert {'page': 1, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 1, 'email': 'george.bluth@reqres.in', 'first_name': 'George', 'last_name': 'Bluth', 'avatar': 'https://reqres.in/img/faces/1-image.jpg'}, {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}, {'id': 3, 'email': 'emma.wong@reqres.in', 'first_name': 'Emma', 'last_name': 'Wong', 'avatar': 'https://reqres.in/img/faces/3-image.jpg'}, {'id': 4, 'email': 'eve.holt@reqres.in', 'first_name': 'Eve', 'last_name': 'Holt', 'avatar': 'https://reqres.in/img/faces/4-image.jpg'}, {'id': 5, 'email': 'charles.morris@reqres.in', 'first_name': 'Charles', 'last_name': 'Morris', 'avatar': 'https://reqres.in/img/faces/5-image.jpg'}, {'id': 6, 'email': 'tracey.ramos@reqres.in', 'first_name': 'Tracey', 'last_name': 'Ramos', 'avatar': 'https://reqres.in/img/faces/6-image.jpg'}], 'support': {'url': 'https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral', 'text': 'Tired of writing endless social media content? Let Content Caddy generate it for you.'}} == {'page': 1, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 1, 'email': 'george.bluth@reqres.in', 'first_name': 'George', 'last_name': 'Bluth', 'avatar': 'https://reqres.in/img/faces/1-image.jpg'}, {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}]}
+  
+  Common items:
+  {'page': 1, 'per_page': 6, 'total': 12, 'total_pages': 2}
+  Differing items:
+  {'data': [{'avatar': 'https://reqres.in/img/faces/1-image.jpg', 'email': 'george.bluth@reqres.in', 'first_name': 'Geor...: 'https://reqres.in/img/faces/6-image.jpg', 'email': 'tracey.ramos@reqres.in', 'first_name': 'Tracey', 'id': 6, ...}]} != {'data': [{'avatar': 'https://reqres.in/img/faces/1-image.jpg', 'email': 'george.bluth@reqres.in', 'first_name': 'Geor...': 'https://reqres.in/img/faces/2-image.jpg', 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'id': 2, ...}]}
+  Left contains 1 more item:
+  {'support': {'text': 'Tired of writing endless social media content? Let '
+                       'Content Caddy generate it for you.',
+               'url': 'https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral'}}
+  
+  Full diff:
+    {
+        'data': [
+            {
+                'avatar': 'https://reqres.in/img/faces/1-image.jpg',
+                'email': 'george.bluth@reqres.in',
+                'first_name': 'George',
+                'id': 1,
+                'last_name': 'Bluth',
+            },
+            {
+                'avatar': 'https://reqres.in/img/faces/2-image.jpg',
+                'email': 'janet.weaver@reqres.in',
+                'first_name': 'Janet',
+                'id': 2,
+                'last_name': 'Weaver',
+            },
+  +         {
+  +             'avatar': 'https://reqres.in/img/faces/3-image.jpg',
+  +             'email': 'emma.wong@reqres.in',
+  +             'first_name': 'Emma',
+  +             'id': 3,
+  +             'last_name': 'Wong',
+  +         },
+  +         {
+  +             'avatar': 'https://reqres.in/img/faces/4-image.jpg',
+  +             'email': 'eve.holt@reqres.in',
+  +             'first_name': 'Eve',
+  +             'id': 4,
+  +             'last_name': 'Holt',
+  +         },
+  +         {
+  +             'avatar': 'https://reqres.in/img/faces/5-image.jpg',
+  +             'email': 'charles.morris@reqres.in',
+  +             'first_name': 'Charles',
+  +             'id': 5,
+  +             'last_name': 'Morris',
+  +         },
+  +         {
+  +             'avatar': 'https://reqres.in/img/faces/6-image.jpg',
+  +             'email': 'tracey.ramos@reqres.in',
+  +             'first_name': 'Tracey',
+  +             'id': 6,
+  +             'last_name': 'Ramos',
+  +         },
+        ],
+        'page': 1,
+        'per_page': 6,
+  +     'support': {
+  +         'text': 'Tired of writing endless social media content? Let Content Caddy '
+  +         'generate it for you.',
+  +         'url': 'https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral',
+  +     },
+        'total': 12,
+        'total_pages': 2,
+    }
+2025-04-21 17:03:31,203 - INFO - 正在运行用例: Fetch a specific user
+2025-04-21 17:03:31,349 - ERROR - Request failed with error: ('Response content mismatch.
+  Expected: {
+    "data": {
+      "id": 2,
+      "email": "janet.weaver@reqres.in",
+      "first_name": "Janet",
+      "last_name": "Weaver",
+      "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    }
+  }
+  Got: {
+    "data": {
+      "id": 2,
+      "email": "janet.weaver@reqres.in",
+      "first_name": "Janet",
+      "last_name": "Weaver",
+      "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    "support": {
+      "url": "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+      "text": "Tired of writing endless social media content? Let Content Caddy generate it for you."
+    }
+  }', 'Failed to parse response as JSON.')
+assert {'data': {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}, 'support': {'url': 'https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral', 'text': 'Tired of writing endless social media content? Let Content Caddy generate it for you.'}} == {'data': {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}}
+  
+  Common items:
+  {'data': {'avatar': 'https://reqres.in/img/faces/2-image.jpg',
+            'email': 'janet.weaver@reqres.in',
+            'first_name': 'Janet',
+            'id': 2,
+            'last_name': 'Weaver'}}
+  Left contains 1 more item:
+  {'support': {'text': 'Tired of writing endless social media content? Let '
+                       'Content Caddy generate it for you.',
+               'url': 'https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral'}}
+  
+  Full diff:
+    {
+        'data': {
+            'avatar': 'https://reqres.in/img/faces/2-image.jpg',
+            'email': 'janet.weaver@reqres.in',
+            'first_name': 'Janet',
+            'id': 2,
+            'last_name': 'Weaver',
+        },
+  +     'support': {
+  +         'text': 'Tired of writing endless social media content? Let Content Caddy '
+  +         'generate it for you.',
+  +         'url': 'https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral',
+  +     },
+    }
+2025-04-21 17:03:31,350 - ERROR - Request failed with error: ('Response content mismatch.
+  Expected: {
+    "data": {
+      "id": 2,
+      "email": "janet.weaver@reqres.in",
+      "first_name": "Janet",
+      "last_name": "Weaver",
+      "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    }
+  }
+  Got: {
+    "data": {
+      "id": 2,
+      "email": "janet.weaver@reqres.in",
+      "first_name": "Janet",
+      "last_name": "Weaver",
+      "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    "support": {
+      "url": "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+      "text": "Tired of writing endless social media content? Let Content Caddy generate it for you."
+    }
+  }', 'Failed to parse response as JSON.')
+assert {'data': {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}, 'support': {'url': 'https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral', 'text': 'Tired of writing endless social media content? Let Content Caddy generate it for you.'}} == {'data': {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}}
+  
+  Common items:
+  {'data': {'avatar': 'https://reqres.in/img/faces/2-image.jpg',
+            'email': 'janet.weaver@reqres.in',
+            'first_name': 'Janet',
+            'id': 2,
+            'last_name': 'Weaver'}}
+  Left contains 1 more item:
+  {'support': {'text': 'Tired of writing endless social media content? Let '
+                       'Content Caddy generate it for you.',
+               'url': 'https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral'}}
+  
+  Full diff:
+    {
+        'data': {
+            'avatar': 'https://reqres.in/img/faces/2-image.jpg',
+            'email': 'janet.weaver@reqres.in',
+            'first_name': 'Janet',
+            'id': 2,
+            'last_name': 'Weaver',
+        },
+  +     'support': {
+  +         'text': 'Tired of writing endless social media content? Let Content Caddy '
+  +         'generate it for you.',
+  +         'url': 'https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral',
+  +     },
+    }
+2025-04-21 17:03:31,378 - INFO - 正在运行用例: Update a user using PUT
+2025-04-21 17:03:31,871 - ERROR - Request failed with error: ('Response content mismatch.
+  Expected: {
+    "name": "John Doe",
+    "job": "Software Engineer",
+    "updatedAt": "2023-10-01T12:34:56.789Z"
+  }
+  Got: {
+    "name": "John Doe",
+    "job": "Software Engineer",
+    "updatedAt": "2025-04-21T09:03:31.683Z"
+  }', 'Failed to parse response as JSON.')
+assert {'name': 'John Doe', 'job': 'Software Engineer', 'updatedAt': '2025-04-21T09:03:31.683Z'} == {'name': 'John Doe', 'job': 'Software Engineer', 'updatedAt': '2023-10-01T12:34:56.789Z'}
+  
+  Common items:
+  {'job': 'Software Engineer', 'name': 'John Doe'}
+  Differing items:
+  {'updatedAt': '2025-04-21T09:03:31.683Z'} != {'updatedAt': '2023-10-01T12:34:56.789Z'}
+  
+  Full diff:
+    {
+        'job': 'Software Engineer',
+        'name': 'John Doe',
+  -     'updatedAt': '2023-10-01T12:34:56.789Z',
+  +     'updatedAt': '2025-04-21T09:03:31.683Z',
+    }
+2025-04-21 17:03:31,872 - ERROR - Request failed with error: ('Response content mismatch.
+  Expected: {
+    "name": "John Doe",
+    "job": "Software Engineer",
+    "updatedAt": "2023-10-01T12:34:56.789Z"
+  }
+  Got: {
+    "name": "John Doe",
+    "job": "Software Engineer",
+    "updatedAt": "2025-04-21T09:03:31.683Z"
+  }', 'Failed to parse response as JSON.')
+assert {'name': 'John Doe', 'job': 'Software Engineer', 'updatedAt': '2025-04-21T09:03:31.683Z'} == {'name': 'John Doe', 'job': 'Software Engineer', 'updatedAt': '2023-10-01T12:34:56.789Z'}
+  
+  Common items:
+  {'job': 'Software Engineer', 'name': 'John Doe'}
+  Differing items:
+  {'updatedAt': '2025-04-21T09:03:31.683Z'} != {'updatedAt': '2023-10-01T12:34:56.789Z'}
+  
+  Full diff:
+    {
+        'job': 'Software Engineer',
+        'name': 'John Doe',
+  -     'updatedAt': '2023-10-01T12:34:56.789Z',
+  +     'updatedAt': '2025-04-21T09:03:31.683Z',
+    }
+2025-04-21 17:03:31,887 - INFO - 正在运行用例: Update a user using PATCH
+2025-04-21 17:03:32,374 - ERROR - Request failed with error: ('Response content mismatch.
+  Expected: {
+    "name": "Jane Doe",
+    "job": "Product Manager",
+    "updatedAt": "2023-10-01T12:34:56.789Z"
+  }
+  Got: {
+    "name": "Jane Doe",
+    "job": "Product Manager",
+    "updatedAt": "2025-04-21T09:03:32.189Z"
+  }', 'Failed to parse response as JSON.')
+assert {'name': 'Jane Doe', 'job': 'Product Manager', 'updatedAt': '2025-04-21T09:03:32.189Z'} == {'name': 'Jane Doe', 'job': 'Product Manager', 'updatedAt': '2023-10-01T12:34:56.789Z'}
+  
+  Common items:
+  {'job': 'Product Manager', 'name': 'Jane Doe'}
+  Differing items:
+  {'updatedAt': '2025-04-21T09:03:32.189Z'} != {'updatedAt': '2023-10-01T12:34:56.789Z'}
+  
+  Full diff:
+    {
+        'job': 'Product Manager',
+        'name': 'Jane Doe',
+  -     'updatedAt': '2023-10-01T12:34:56.789Z',
+  ?                      ^^^^    ^^  ^^^^ ^
+  +     'updatedAt': '2025-04-21T09:03:32.189Z',
+  ?                      ^  +++  ^^^^^  ^ ^
+    }
+2025-04-21 17:03:32,374 - ERROR - Request failed with error: ('Response content mismatch.
+  Expected: {
+    "name": "Jane Doe",
+    "job": "Product Manager",
+    "updatedAt": "2023-10-01T12:34:56.789Z"
+  }
+  Got: {
+    "name": "Jane Doe",
+    "job": "Product Manager",
+    "updatedAt": "2025-04-21T09:03:32.189Z"
+  }', 'Failed to parse response as JSON.')
+assert {'name': 'Jane Doe', 'job': 'Product Manager', 'updatedAt': '2025-04-21T09:03:32.189Z'} == {'name': 'Jane Doe', 'job': 'Product Manager', 'updatedAt': '2023-10-01T12:34:56.789Z'}
+  
+  Common items:
+  {'job': 'Product Manager', 'name': 'Jane Doe'}
+  Differing items:
+  {'updatedAt': '2025-04-21T09:03:32.189Z'} != {'updatedAt': '2023-10-01T12:34:56.789Z'}
+  
+  Full diff:
+    {
+        'job': 'Product Manager',
+        'name': 'Jane Doe',
+  -     'updatedAt': '2023-10-01T12:34:56.789Z',
+  ?                      ^^^^    ^^  ^^^^ ^
+  +     'updatedAt': '2025-04-21T09:03:32.189Z',
+  ?                      ^  +++  ^^^^^  ^ ^
+    }
+2025-04-21 17:03:32,383 - INFO - 正在运行用例: Delete a user
+2025-04-21 17:03:32,870 - ERROR - Request failed with error: Expecting value: line 1 column 1 (char 0)
+2025-04-21 17:03:32,871 - ERROR - Request failed with error: Expecting value: line 1 column 1 (char 0)
+2025-04-21 17:03:53,455 - INFO - 正在运行用例: Fetch user list
+2025-04-21 17:03:53,610 - INFO - 正在运行用例: Fetch a specific user
+2025-04-21 17:03:53,747 - INFO - 正在运行用例: Update a user using PUT
+2025-04-21 17:03:54,259 - INFO - 正在运行用例: Update a user using PATCH
+2025-04-21 17:03:54,748 - INFO - 正在运行用例: Delete a user
+2025-04-21 17:30:39,411 - INFO - 正在运行用例: Create a session (login)
+2025-04-21 17:30:40,193 - INFO - 正在运行用例: Login with invalid credentials
+2025-04-21 17:31:07,739 - INFO - 正在运行用例: Create a session (login)
+2025-04-21 17:31:08,241 - INFO - 正在运行用例: Login with invalid credentials
+2025-04-21 17:31:17,023 - INFO - 正在运行用例: Fetch user list
+2025-04-21 17:31:17,195 - INFO - 正在运行用例: Fetch a specific user
+2025-04-21 17:31:17,329 - INFO - 正在运行用例: Update a user using PUT
+2025-04-21 17:31:17,818 - INFO - 正在运行用例: Update a user using PATCH
+2025-04-21 17:31:18,333 - INFO - 正在运行用例: Delete a user
+2025-04-21 17:32:38,421 - INFO - 正在运行用例: Fetch resource list
+2025-04-21 17:32:38,932 - INFO - 正在运行用例: Fetch user list
+2025-04-21 17:32:39,064 - INFO - 正在运行用例: Fetch a specific user
+2025-04-21 17:32:39,204 - INFO - 正在运行用例: Update a user using PUT
+2025-04-21 17:32:39,707 - INFO - 正在运行用例: Update a user using PATCH
+2025-04-21 17:32:40,171 - INFO - 正在运行用例: Delete a user
+2025-04-21 17:32:40,656 - INFO - 正在运行用例: Fetch an unknown resource
+2025-04-21 17:32:41,147 - INFO - 正在运行用例: Create a session (login)
+2025-04-21 17:32:41,655 - INFO - 正在运行用例: Login with invalid credentials
+2025-04-21 17:32:42,154 - INFO - 正在运行用例: Register a new user
+2025-04-21 17:32:42,624 - INFO - 正在运行用例: Register with missing password
+2025-04-21 17:32:43,088 - INFO - 正在运行用例: End a session (logout)
+2025-04-21 17:35:31,680 - INFO - 正在运行用例: Fetch user list
+2025-04-21 17:35:31,831 - INFO - 正在运行用例: Fetch a specific user
+2025-04-21 17:35:31,966 - INFO - 正在运行用例: Update a user using PUT
+2025-04-21 17:35:32,451 - INFO - 正在运行用例: Update a user using PATCH
+2025-04-21 17:35:32,911 - INFO - 正在运行用例: Delete a user
+2025-04-21 17:42:47,248 - INFO - 正在运行用例: Fetch user list
+2025-04-21 17:42:47,412 - INFO - 正在运行用例: Fetch a specific user
+2025-04-21 17:42:47,554 - INFO - 正在运行用例: Update a user using PUT
+2025-04-21 17:42:48,019 - INFO - 正在运行用例: Update a user using PATCH
+2025-04-21 17:42:48,495 - INFO - 正在运行用例: Delete a user

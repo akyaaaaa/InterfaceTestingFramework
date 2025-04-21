@@ -9,7 +9,7 @@ def test_example():
     assert True
 
 
-@pytest.mark.parametrize("user", load_json("example_data.json",modelname='login')["users"])
+@pytest.mark.parametrize("user", load_json("example_data.json",modelname='reqres.in_api')["users"])
 def test_example1(user):
     assert user["id"] > 0
     assert "@" in user["email"]
