@@ -1,0 +1,186 @@
+{
+  "ROOTURL": "https://reqres.in",
+  "test_cases":
+  [
+  {
+    "name": "Fetch resource list",
+    "method": "GET",
+    "url": "/api/resource",
+    "body": null,
+    "expected_status_code": 200,
+    "expected_response": {
+      "page": 1,
+      "per_page": 6,
+      "total": 12,
+      "total_pages": 2,
+      "data": [
+        {
+          "id": 1,
+          "name": "cerulean",
+          "year": 2000,
+          "color": "#98B2D1",
+          "pantone_value": "15-4020"
+        },
+        {
+          "id": 2,
+          "name": "fuchsia rose",
+          "year": 2001,
+          "color": "#C74375",
+          "pantone_value": "17-2031"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Fetch user list",
+    "method": "GET",
+    "url": "/api/users",
+    "body": null,
+    "expected_status_code": 200,
+    "expected_response": {
+      "page": 1,
+      "per_page": 6,
+      "total": 12,
+      "total_pages": 2,
+      "data": [
+        {
+          "id": 1,
+          "email": "george.bluth@reqres.in",
+          "first_name": "George",
+          "last_name": "Bluth",
+          "avatar": "https://reqres.in/img/faces/1-image.jpg"
+        },
+        {
+          "id": 2,
+          "email": "janet.weaver@reqres.in",
+          "first_name": "Janet",
+          "last_name": "Weaver",
+          "avatar": "https://reqres.in/img/faces/2-image.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Fetch a specific user",
+    "method": "GET",
+    "url": "/api/users/2",
+    "body": null,
+    "expected_status_code": 200,
+    "expected_response": {
+      "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+      }
+    }
+  },
+  {
+    "name": "Update a user using PUT",
+    "method": "PUT",
+    "url": "/api/users/2",
+    "body": {
+      "name": "John Doe",
+      "job": "Software Engineer"
+    },
+    "expected_status_code": 200,
+    "expected_response": {
+      "name": "John Doe",
+      "job": "Software Engineer",
+      "updatedAt": "2023-10-01T12:34:56.789Z"
+    }
+  },
+  {
+    "name": "Update a user using PATCH",
+    "method": "PATCH",
+    "url": "/api/users/2",
+    "body": {
+      "name": "Jane Doe",
+      "job": "Product Manager"
+    },
+    "expected_status_code": 200,
+    "expected_response": {
+      "name": "Jane Doe",
+      "job": "Product Manager",
+      "updatedAt": "2023-10-01T12:34:56.789Z"
+    }
+  },
+  {
+    "name": "Delete a user",
+    "method": "DELETE",
+    "url": "/api/users/2",
+    "body": null,
+    "expected_status_code": 204,
+    "expected_response": null
+  },
+  {
+    "name": "Fetch an unknown resource",
+    "method": "GET",
+    "url": "/api/resource/23",
+    "body": null,
+    "expected_status_code": 404,
+    "expected_response": {}
+  },
+  {
+    "name": "Create a session (login)",
+    "method": "POST",
+    "url": "/api/login",
+    "body": {
+      "email": "eve.holt@reqres.in",
+      "password": "cityslicka"
+    },
+    "expected_status_code": 200,
+    "expected_response": {
+      "token": "QpwL5tke4Pnpja7X4"
+    }
+  },
+  {
+    "name": "Login with invalid credentials",
+    "method": "POST",
+    "url": "/api/login",
+    "body": {
+      "email": "invalid.email@reqres.in",
+      "password": "wrongpassword"
+    },
+    "expected_status_code": 400,
+    "expected_response": {
+      "error": "user not found"
+    }
+  },
+  {
+    "name": "Register a new user",
+    "method": "POST",
+    "url": "/api/register",
+    "body": {
+      "email": "eve.holt@reqres.in",
+      "password": "pistol"
+    },
+    "expected_status_code": 200,
+    "expected_response": {
+      "id": 4,
+      "token": "QpwL5tke4Pnpja7X4"
+    }
+  },
+  {
+    "name": "Register with missing password",
+    "method": "POST",
+    "url": "/api/register",
+    "body": {
+      "email": "eve.holt@reqres.in"
+    },
+    "expected_status_code": 400,
+    "expected_response": {
+      "error": "Missing password"
+    }
+  },
+  {
+    "name": "End a session (logout)",
+    "method": "POST",
+    "url": "/api/logout",
+    "body": {},
+    "expected_status_code": 200,
+    "expected_response": {}
+  }
+  ]
+}

@@ -1,0 +1,12 @@
+2025-04-21 16:05:13,499 - INFO - 正在运行用例: Login with invalid credentials
+2025-04-21 16:05:40,530 - INFO - 正在运行用例: Login with invalid credentials
+2025-04-21 16:17:02,538 - INFO - 正在运行用例: Login with invalid credentials
+2025-04-21 16:17:18,570 - INFO - 正在运行用例: Login with invalid credentials
+2025-04-21 16:17:18,572 - ERROR - Request failed with error: Invalid URL '/api/login': No scheme supplied. Perhaps you meant https:///api/login?
+2025-04-21 16:17:55,502 - INFO - 正在运行用例: Login with invalid credentials
+2025-04-21 16:17:55,504 - ERROR - Request failed with error: No connection adapters were found for '/api/loginhttps://reqres.in'
+2025-04-21 16:18:24,725 - INFO - 正在运行用例: Login with invalid credentials
+2025-04-21 16:18:24,727 - INFO - https://reqres.in/api/login
+2025-04-21 16:18:55,339 - INFO - 正在运行用例: Login with invalid credentials
+2025-04-21 16:23:43,537 - INFO - 正在运行用例: Create a session (login)
+2025-04-21 16:23:44,071 - INFO - 正在运行用例: Login with invalid credentials
