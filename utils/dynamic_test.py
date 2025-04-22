@@ -1,16 +1,16 @@
-
 import requests
+
 from utils.logger import log_info, log_error
 
 
-class Test_login:
+class DynamicTest:
     # 可以使用--category参数来指定跑具体模块的用例
     @staticmethod
-    def dynamic_tests_category(test_case,root_url):
+    def dynamic_tests_category(test_case, root_url):
         log_info(f"正在运行用例: {test_case['name']}")
         # 构造请求
         method = test_case["method"]
-        url = root_url+test_case["url"]
+        url = root_url + test_case["url"]
         body = test_case["body"]
         try:
             if method == "GET":
