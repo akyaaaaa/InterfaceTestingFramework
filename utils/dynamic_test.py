@@ -13,16 +13,18 @@ class DynamicTest:
         url = root_url + test_case["url"]
         body = test_case["body"]
         try:
+            # 加上demo网站的特殊headers，不然可能请求错误
+            headers = {"x-api-key": "reqres-free-v1"}
             if method == "GET":
-                response = requests.get(url)
+                response = requests.get(url, headers=headers)
             elif method == "POST":
-                response = requests.post(url, json=body)
+                response = requests.post(url, json=body, headers=headers)
             elif method == "PUT":
-                response = requests.put(url, json=body)
+                response = requests.put(url, json=body, headers=headers)
             elif method == "PATCH":
-                response = requests.patch(url, json=body)
+                response = requests.patch(url, json=body, headers=headers)
             elif method == "DELETE":
-                response = requests.delete(url)
+                response = requests.delete(url, headers=headers)
             else:
                 assert False, f"Unsupported method: {method}"
 

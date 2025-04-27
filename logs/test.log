@@ -851,3 +851,37 @@ assert {'name': 'Jane Doe', 'job': 'Product Manager', 'updatedAt': '2025-04-21T0
 2025-04-22 15:35:50,594 - INFO - 正在运行用例: 使用PUT更新用户
 2025-04-22 15:35:50,966 - INFO - 正在运行用例: 退出结束会话
 2025-04-22 15:35:50,973 - INFO - 正在运行用例: 创建登录会话
+2025-04-27 12:11:26,221 - INFO - 正在运行用例: 获取资源列表
+2025-04-27 12:11:26,221 - INFO - 正在运行用例: 获取用户列表
+2025-04-27 12:11:26,222 - INFO - 正在运行用例: 获取特定用户
+2025-04-27 12:11:26,233 - INFO - 正在运行用例: 使用PATCH更新用户
+2025-04-27 12:11:26,234 - INFO - 正在运行用例: 删除用户
+2025-04-27 12:11:26,234 - INFO - 正在运行用例: 获取未知的资源
+2025-04-27 12:11:26,247 - INFO - 正在运行用例: 使用无效凭据登录
+2025-04-27 12:11:26,247 - INFO - 正在运行用例: 注册一个新用户
+2025-04-27 12:11:26,247 - INFO - 正在运行用例: 密码缺失的注册
+2025-04-27 12:11:26,369 - INFO - 正在运行用例: 使用PUT更新用户
+2025-04-27 12:11:26,709 - ERROR - Request failed with error: ('Status code mismatch. Expected: 200', 'Got: 401')
+2025-04-27 12:11:26,709 - ERROR - Request failed with error: ('Status code mismatch. Expected: 204', 'Got: 401')
+2025-04-27 12:11:26,710 - INFO - 正在运行用例: 创建登录会话
+2025-04-27 12:11:26,715 - ERROR - Request failed with error: ('Status code mismatch. Expected: 400', 'Got: 401')
+2025-04-27 12:11:26,715 - INFO - 正在运行用例: 退出结束会话
+2025-04-27 12:11:26,732 - ERROR - Request failed with error: ('Status code mismatch. Expected: 404', 'Got: 401')
+2025-04-27 12:11:26,738 - ERROR - Request failed with error: ('Status code mismatch. Expected: 200', 'Got: 401')
+2025-04-27 12:11:26,745 - ERROR - Request failed with error: ('Status code mismatch. Expected: 200', 'Got: 401')
+2025-04-27 12:11:26,748 - ERROR - Request failed with error: ('Status code mismatch. Expected: 400', 'Got: 401')
+2025-04-27 12:11:26,778 - ERROR - Request failed with error: ('Status code mismatch. Expected: 200', 'Got: 401')
+2025-04-27 12:11:26,859 - ERROR - Request failed with error: ('Status code mismatch. Expected: 200', 'Got: 401')
+2025-04-27 12:11:27,200 - ERROR - Request failed with error: ('Status code mismatch. Expected: 200', 'Got: 401')
+2025-04-27 12:18:49,370 - INFO - 正在运行用例: 获取资源列表
+2025-04-27 12:18:49,370 - INFO - 正在运行用例: 获取用户列表
+2025-04-27 12:18:49,370 - INFO - 正在运行用例: 获取特定用户
+2025-04-27 12:18:49,388 - INFO - 正在运行用例: 使用PATCH更新用户
+2025-04-27 12:18:49,388 - INFO - 正在运行用例: 删除用户
+2025-04-27 12:18:49,389 - INFO - 正在运行用例: 获取未知的资源
+2025-04-27 12:18:49,412 - INFO - 正在运行用例: 使用无效凭据登录
+2025-04-27 12:18:49,412 - INFO - 正在运行用例: 注册一个新用户
+2025-04-27 12:18:49,413 - INFO - 正在运行用例: 密码缺失的注册
+2025-04-27 12:18:49,884 - INFO - 正在运行用例: 使用PUT更新用户
+2025-04-27 12:18:49,896 - INFO - 正在运行用例: 创建登录会话
+2025-04-27 12:18:49,898 - INFO - 正在运行用例: 退出结束会话
