@@ -22,7 +22,7 @@ def setup_logger():
         os.path.join(LOG_DIR, "test.log"),
         maxBytes=10 * 1024 * 1024,  # 每个日志文件最大 10MB
         backupCount=5,  # 保留最多 5 个备份文件
-        encoding="utf-8"
+        encoding="utf-8",
     )
     file_handler.setLevel(logging.INFO)
 

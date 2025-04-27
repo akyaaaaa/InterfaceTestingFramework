@@ -4,7 +4,7 @@
     {
       "name": "获取资源列表",
       "category": "resource",
-      "method": "GET",
+      "method": " ",
       "url": "/api/resource",
       "body": null,
       "expected_status_code": 200,

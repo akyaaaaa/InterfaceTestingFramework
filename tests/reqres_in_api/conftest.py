@@ -14,7 +14,7 @@ def pytest_addoption(parser):
         "--category",
         action="store",
         default="all",
-        help="Run test cases of a specific category (e.g., reqres_in_api, user, resource)"
+        help="Run test cases of a specific category (e.g., reqres_in_api, user, resource)",
     )
 
 
@@ -31,7 +31,9 @@ class CategoryTestsCollector(pytest.Collector):
             # 获取命令行参数
             category = self.config.getoption("--category")
             # 加载 JSON 数据
-            test_data = load_json(file_name='example_data.json', modelname='reqres_in_api')
+            test_data = load_json(
+                file_name="example_data.json", modelname="reqres_in_api"
+            )
             root_url = test_data.get("ROOTURL")
             # 如果test_data中没有"test_cases"键，代码不会抛出异常，而是返回一个空列表[]
             test_cases = test_data.get("test_cases", [])
@@ -42,7 +44,9 @@ class CategoryTestsCollector(pytest.Collector):
             if category == "all":
                 filtered_cases = test_cases  # 运行所有用例
             else:
-                filtered_cases = [case for case in test_cases if case.get("category") == category]
+                filtered_cases = [
+                    case for case in test_cases if case.get("category") == category
+                ]
 
             for index, case in enumerate(filtered_cases):
                 # 筛选与登录相关的测试用例
@@ -50,7 +54,7 @@ class CategoryTestsCollector(pytest.Collector):
                     self,
                     # name=f"{case['name']}_{uuid.uuid4().hex[:6]}",
                     name=f"{case['name']}_{index}",
-                    callobj=create_test_function(case, root_url)
+                    callobj=create_test_function(case, root_url),
                 )
         except Exception as e:
             print(f"Failed to load test cases: {e}")
@@ -66,7 +70,7 @@ def pytest_pycollect_makeitem(collector, name, obj):
 # 动态生成测试函数
 def pytest_generate_tests(metafunc):
     if "case" in metafunc.fixturenames:
-        test_data = load_json("example_data.json", modelname='reqres_in_api')
+        test_data = load_json("example_data.json", modelname="reqres_in_api")
         test_cases = test_data.get("test_cases", [])
         metafunc.parametrize("case", test_cases)
 
@@ -74,12 +78,12 @@ def pytest_generate_tests(metafunc):
 @pytest.fixture(scope="session")
 def all_test_cases():
     """加载所有测试用例"""
-    test_data = load_json("example_data.json", modelname='reqres_in_api')
+    test_data = load_json("example_data.json", modelname="reqres_in_api")
     return test_data.get("test_cases", [])
 
 
 @pytest.fixture(scope="session")
 def root_url():
     """加载根 URL"""
-    test_data = load_json("example_data.json", modelname='reqres_in_api')
+    test_data = load_json("example_data.json", modelname="reqres_in_api")
     return test_data.get("ROOTURL")

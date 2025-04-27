@@ -31,7 +31,8 @@ class DynamicTest:
             # 检查状态码
             assert response.status_code == test_case["expected_status_code"], (
                 f"Status code mismatch. Expected: {test_case['expected_status_code']}",
-                f"Got: {response.status_code}")
+                f"Got: {response.status_code}",
+            )
 
             # # 检查响应内容
             # try:
