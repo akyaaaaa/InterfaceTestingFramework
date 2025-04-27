@@ -1,5 +1,5 @@
 allure_report/
-frontend/node_modules
+frontend/node_modules/
 utils/__pycache__/
 */__pycache__/*
 logs/*
@@ -7,3 +7,4 @@ tests/reqres_in_api/__pycache__/
 logs/
 __pycache__/
 .idea/
+testapi/migrations/

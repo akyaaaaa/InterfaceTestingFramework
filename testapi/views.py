@@ -16,20 +16,24 @@ class TestCaseViewSet(viewsets.ModelViewSet):
             return Response({'error': 'No file provided'}, status=status.HTTP_400_BAD_REQUEST)
         
         file = request.FILES['file']
+        
+        
         try:
             data = json.load(file)
+            # 多条
             if isinstance(data, list):
                 for item in data:
                     serializer = self.get_serializer(data=item)
                     serializer.is_valid(raise_exception=True)
                     serializer.save()
             else:
+            # 单条
                 serializer = self.get_serializer(data=data)
                 serializer.is_valid(raise_exception=True)
                 serializer.save()
             return Response({'status': 'success'}, status=status.HTTP_201_CREATED)
         except Exception as e:
-            return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'error': f'{str(e)},上传文件只能为json文件，多条用例用[]包含'}, status=status.HTTP_400_BAD_REQUEST)
 
     @action(detail=False, methods=['post'])
     def run_all(self, request):
