@@ -37,8 +37,33 @@ class TestCaseViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['post'])
     def run_all(self, request):
-        # TODO: 实现执行所有测试用例的逻辑
-        return Response({'status': 'All test cases executed'})
+        from utils.test_runner import run_test_case
+        test_cases = TestCase.objects.all()
+        results = []
+        
+        for case in test_cases:
+            try:
+                result = run_test_case(case)
+                results.append({
+                    'id': case.id,
+                    'name': case.name,
+                    'status': 'success',
+                    'response': result
+                })
+            except Exception as e:
+                results.append({
+                    'id': case.id,
+                    'name': case.name,
+                    'status': 'failed',
+                    'error': str(e)
+                })
+        
+        return Response({
+            'total': len(results),
+            'passed': len([r for r in results if r['status'] == 'success']),
+            'failed': len([r for r in results if r['status'] == 'failed']),
+            'results': results
+        })
 
     @action(detail=True, methods=['post'])
     def run(self, request, id=None):

@@ -885,3 +885,22 @@ assert {'name': 'Jane Doe', 'job': 'Product Manager', 'updatedAt': '2025-04-21T0
 2025-04-27 12:18:49,884 - INFO - 正在运行用例: 使用PUT更新用户
 2025-04-27 12:18:49,896 - INFO - 正在运行用例: 创建登录会话
 2025-04-27 12:18:49,898 - INFO - 正在运行用例: 退出结束会话
+2025-04-27 17:46:36,383 - ERROR - Test case 获取资源列表 failed: 'TestCase' object has no attribute 'rootUrl'
+2025-04-27 17:46:36,383 - ERROR - Test case 获取特定用户 failed: 'TestCase' object has no attribute 'rootUrl'
+2025-04-27 17:46:36,384 - ERROR - Test case 退出结束会话 failed: 'TestCase' object has no attribute 'rootUrl'
+2025-04-27 17:46:36,384 - ERROR - Test case 用例1 failed: 'TestCase' object has no attribute 'rootUrl'
+2025-04-27 17:46:36,385 - ERROR - Test case 用例2 failed: 'TestCase' object has no attribute 'rootUrl'
+2025-04-27 17:48:53,168 - ERROR - Test case 获取资源列表 failed: Expected status 200, got 401
+2025-04-27 17:48:53,813 - ERROR - Test case 退出结束会话 failed: Expected status 200, got 401
+2025-04-27 17:48:54,329 - ERROR - Test case 用例1 failed: Expected status 200, got 401
+2025-04-27 17:48:54,466 - ERROR - Test case 用例2 failed: Field data mismatch. Expected {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver'}, got {'id': 2, 'email': 'janet.weaver@reqres.in', 'first_name': 'Janet', 'last_name': 'Weaver', 'avatar': 'https://reqres.in/img/faces/2-image.jpg'}
+2025-04-27 17:51:36,556 - ERROR - Test case 获取资源列表 failed: 'str' object has no attribute 'items'
+2025-04-27 17:51:36,557 - ERROR - Test case 获取特定用户 failed: 'str' object has no attribute 'items'
+2025-04-27 17:51:36,559 - ERROR - Test case 退出结束会话 failed: 'str' object has no attribute 'items'
+2025-04-27 17:51:36,560 - ERROR - Test case 用例1 failed: 'str' object has no attribute 'items'
+2025-04-27 17:51:36,561 - ERROR - Test case 用例2 failed: 'str' object has no attribute 'items'
+2025-04-27 17:53:19,765 - ERROR - Test case 获取资源列表 failed: 'str' object has no attribute 'items'
+2025-04-27 17:53:19,766 - ERROR - Test case 获取特定用户 failed: 'str' object has no attribute 'items'
+2025-04-27 17:53:19,767 - ERROR - Test case 退出结束会话 failed: 'str' object has no attribute 'items'
+2025-04-27 17:53:19,769 - ERROR - Test case 用例1 failed: 'str' object has no attribute 'items'
+2025-04-27 17:53:19,770 - ERROR - Test case 用例2 failed: 'str' object has no attribute 'items'
