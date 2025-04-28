@@ -48,7 +48,7 @@ def run_test_case(test_case):
             'error': str(e),
             'passed': False
         }
-def process_task(test_cases, root_url):
+def process_task(test_cases):
     """批量执行测试用例"""
     results = []
     for case in test_cases:
