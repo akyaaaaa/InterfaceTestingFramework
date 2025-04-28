@@ -7,7 +7,7 @@ import os
 
 def init_django():
     # DJANGO_SETTINGS_MODULE 是 Django 的核心环境变量，用于指定项目的配置模块路径（此条指定backend.settings）
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'apps.backend.settings')
     django.setup()
     # 关闭并重新打开数据库连接
     if connection.connection:

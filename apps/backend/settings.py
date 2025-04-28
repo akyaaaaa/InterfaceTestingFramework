@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 
 # 基础目录配置
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent  # 向上三级到项目根目录
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -13,7 +13,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'testapi',
+    'apps.backend',
+    'apps.testapi',
 ]
 DATABASES = {
     'default': {
@@ -81,4 +82,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # URL配置
-ROOT_URLCONF = 'backend.urls'
+ROOT_URLCONF = 'apps.backend.urls'  # 更新URL配置路径
