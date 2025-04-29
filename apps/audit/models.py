@@ -1,8 +1,11 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 
+# 相比于from django.contrib.auth.models import User，下面地方法会更加灵活地获取用户
 User = get_user_model()
-
+"""
+创建了一张AuditLog表,外键(use)连接到User,有字段action,ip_address,object_type,object_id,timestamp,details
+"""
 class AuditLog(models.Model):
     ACTION_CHOICES = [
         ('CREATE', '创建'),
@@ -51,6 +54,7 @@ class AuditLog(models.Model):
         verbose_name = '审计日志'
         verbose_name_plural = verbose_name
         ordering = ['-timestamp']
+        # 展示内容的排序规则
         indexes = [
             models.Index(fields=['user']),
             models.Index(fields=['action']),

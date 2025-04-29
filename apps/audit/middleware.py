@@ -1,7 +1,9 @@
 from .models import AuditLog
 from django.utils import timezone
 from django.contrib.auth import get_user
-
+"""
+中间件，记录"谁在什么时候访问了什么API",配置到settings文件后(每次都会默认执行所有的中间件)将自动对每个请求都执行
+"""
 class AuditMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response

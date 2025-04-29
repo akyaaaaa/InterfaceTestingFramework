@@ -904,3 +904,32 @@ assert {'name': 'Jane Doe', 'job': 'Product Manager', 'updatedAt': '2025-04-21T0
 2025-04-27 17:53:19,767 - ERROR - Test case é€€å‡ºç»“æŸä¼šè¯ failed: 'str' object has no attribute 'items'
 2025-04-27 17:53:19,769 - ERROR - Test case ç”¨ä¾‹1 failed: 'str' object has no attribute 'items'
 2025-04-27 17:53:19,770 - ERROR - Test case ç”¨ä¾‹2 failed: 'str' object has no attribute 'items'
+INFO 2025-04-29 16:10:08,469 autoreload Watching for file changes with StatReloader
+INFO 2025-04-29 16:12:14,371 autoreload D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\apps\auth\views.py changed, reloading.
+INFO 2025-04-29 16:12:15,458 autoreload Watching for file changes with StatReloader
+INFO 2025-04-29 16:13:12,635 autoreload D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\apps\auth\views.py changed, reloading.
+INFO 2025-04-29 16:13:14,172 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-29 16:15:12,462 views 
+==== ÇëÇóµ÷ÊÔ¿ªÊ¼ ====
+DEBUG 2025-04-29 16:15:12,479 views 1. Ô­Ê¼ÇëÇóÊı¾İ: b'{\r\n    "username": "test3",\r\n    "password": "123456"\r\n}'
+DEBUG 2025-04-29 16:15:12,480 views 2. ÇëÇóÍ·: {'Content-Length': '56', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/7.36.0', 'Accept': '*/*', 'Postman-Token': 'd8f893f5-0ac1-437f-9367-2970e044e135', 'Host': 'localhost:8000', 'Accept-Encoding': 'gzip, deflate, br', 'Connection': 'keep-alive'}
+DEBUG 2025-04-29 16:15:12,481 views 3. ½âÎöºóµÄÊı¾İ: {'username': 'test3', 'password': '123456'}
+DEBUG 2025-04-29 16:15:12,481 views 4. »ñÈ¡µ½µÄÓÃ»§Ãû: test3
+DEBUG 2025-04-29 16:15:12,482 views 5. »ñÈ¡µ½µÄÃÜÂë: 123456
+DEBUG 2025-04-29 16:15:12,484 views 6. ÓÃ»§´æÔÚ: True
+DEBUG 2025-04-29 16:15:12,484 views ½âÎöºóµÄÊı¾İ - ÓÃ»§Ãû:test3, ÃÜÂë:123456
+DEBUG 2025-04-29 16:15:13,247 views ÈÏÖ¤½á¹û£ºtest3
+INFO 2025-04-29 16:17:14,893 autoreload D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\apps\backend\settings.py changed, reloading.
+INFO 2025-04-29 16:17:16,011 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-29 16:17:35,921 views 
+==== è¯·æ±‚è°ƒè¯•å¼€å§‹ ====
+DEBUG 2025-04-29 16:17:35,921 views 1. åŸå§‹è¯·æ±‚æ•°æ®: b'{\r\n    "username": "test3",\r\n    "password": "123456"\r\n}'
+DEBUG 2025-04-29 16:17:35,922 views 2. è¯·æ±‚å¤´: {'Content-Length': '56', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/7.36.0', 'Accept': '*/*', 'Postman-Token': 'e9dd6dd9-1fe1-4c5f-9b5a-ad61ed0dd404', 'Host': 'localhost:8000', 'Accept-Encoding': 'gzip, deflate, br', 'Connection': 'keep-alive'}
+DEBUG 2025-04-29 16:17:35,922 views 3. è§£æåçš„æ•°æ®: {'username': 'test3', 'password': '123456'}
+DEBUG 2025-04-29 16:17:35,923 views 4. è·å–åˆ°çš„ç”¨æˆ·å: test3
+DEBUG 2025-04-29 16:17:35,923 views 5. è·å–åˆ°çš„å¯†ç : 123456
+DEBUG 2025-04-29 16:17:35,927 views 6. ç”¨æˆ·å­˜åœ¨: True
+DEBUG 2025-04-29 16:17:35,928 views è§£æåçš„æ•°æ® - ç”¨æˆ·å:test3, å¯†ç :123456
+DEBUG 2025-04-29 16:17:36,734 views è®¤è¯ç»“æœï¼štest3
+INFO 2025-04-29 16:18:26,860 autoreload D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\apps\backend\settings.py changed, reloading.
+INFO 2025-04-29 16:18:27,896 autoreload Watching for file changes with StatReloader

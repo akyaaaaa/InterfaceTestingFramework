@@ -3,5 +3,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('apps.testapi.urls')),  # 更新为新的应用路径
+    path('api/', include('apps.testapi.urls')),
+    path('api/audit/', include('apps.audit.urls')),
+    path('api/auth/', include('apps.auth.urls', namespace='auth')),
 ]
