@@ -59,7 +59,6 @@ LOGGING = {
         'verbose': {
             'format': '{levelname} {asctime} {module} {message}',
             'style': '{',
-            'encoding': 'utf-8',
         },
     },
     'handlers': {

@@ -29,7 +29,9 @@ class AuditLog(models.Model):
         verbose_name='操作类型'
     )
     ip_address = models.GenericIPAddressField(
-        verbose_name='IP地址'
+        verbose_name='IP地址',
+        null=True,
+        blank=True
     )
     object_type = models.CharField(
         max_length=100,

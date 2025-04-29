@@ -933,3 +933,626 @@ DEBUG 2025-04-29 16:17:35,928 views 解析后的数据 - 用户名:test3, 密码
 DEBUG 2025-04-29 16:17:36,734 views 认证结果：test3
 INFO 2025-04-29 16:18:26,860 autoreload D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\apps\backend\settings.py changed, reloading.
 INFO 2025-04-29 16:18:27,896 autoreload Watching for file changes with StatReloader
+WARNING 2025-04-29 17:46:35,694 log Not Found: /
+INFO 2025-04-29 17:47:40,493 autoreload D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\apps\backend\settings.py changed, reloading.
+INFO 2025-04-29 17:47:42,315 autoreload Watching for file changes with StatReloader
+ERROR 2025-04-29 17:48:05,801 log Internal Server Error: /admin/logout/
+Traceback (most recent call last):
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: audit_auditlog.ip_address
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 265, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 410, in logout
+    return LogoutView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\views.py", line 137, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\views.py", line 141, in post
+    auth_logout(request)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 254, in logout
+    request.session.flush()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 418, in flush
+    self.delete()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 175, in delete
+    self.model.objects.get(session_key=session_key).delete()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1281, in delete
+    return collector.delete()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\deletion.py", line 507, in delete
+    signals.post_delete.send(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\dispatch\dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\apps\audit\signals.py", line 65, in log_delete
+    AuditLog.objects.create(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: audit_auditlog.ip_address
+ERROR 2025-04-29 17:49:00,877 log Internal Server Error: /admin/logout/
+Traceback (most recent call last):
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: audit_auditlog.ip_address
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 265, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 410, in logout
+    return LogoutView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\views.py", line 137, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\views.py", line 141, in post
+    auth_logout(request)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 254, in logout
+    request.session.flush()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 418, in flush
+    self.delete()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 175, in delete
+    self.model.objects.get(session_key=session_key).delete()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1281, in delete
+    return collector.delete()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\deletion.py", line 507, in delete
+    signals.post_delete.send(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\dispatch\dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\apps\audit\signals.py", line 65, in log_delete
+    AuditLog.objects.create(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: audit_auditlog.ip_address
+INFO 2025-04-29 17:49:15,622 autoreload D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\apps\backend\settings.py changed, reloading.
+INFO 2025-04-29 17:49:16,722 autoreload Watching for file changes with StatReloader
+ERROR 2025-04-29 17:49:29,250 log Internal Server Error: /admin/logout/
+Traceback (most recent call last):
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: audit_auditlog.ip_address
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 265, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 410, in logout
+    return LogoutView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\views.py", line 137, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\views.py", line 141, in post
+    auth_logout(request)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 254, in logout
+    request.session.flush()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 418, in flush
+    self.delete()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 175, in delete
+    self.model.objects.get(session_key=session_key).delete()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1281, in delete
+    return collector.delete()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\deletion.py", line 507, in delete
+    signals.post_delete.send(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\dispatch\dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\apps\audit\signals.py", line 65, in log_delete
+    AuditLog.objects.create(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: audit_auditlog.ip_address
+WARNING 2025-04-29 17:49:47,551 log Not Found: /
+INFO 2025-04-29 17:52:00,968 autoreload D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\apps\audit\models.py changed, reloading.
+INFO 2025-04-29 17:52:02,046 autoreload Watching for file changes with StatReloader
+ERROR 2025-04-29 17:52:12,371 log Internal Server Error: /admin/logout/
+Traceback (most recent call last):
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: audit_auditlog.ip_address
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 265, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 410, in logout
+    return LogoutView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\views.py", line 137, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\views.py", line 141, in post
+    auth_logout(request)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 254, in logout
+    request.session.flush()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 418, in flush
+    self.delete()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 175, in delete
+    self.model.objects.get(session_key=session_key).delete()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1281, in delete
+    return collector.delete()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\deletion.py", line 507, in delete
+    signals.post_delete.send(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\dispatch\dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\apps\audit\signals.py", line 65, in log_delete
+    AuditLog.objects.create(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: audit_auditlog.ip_address
+ERROR 2025-04-29 17:52:33,966 log Internal Server Error: /admin/logout/
+Traceback (most recent call last):
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: audit_auditlog.ip_address
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 265, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\admin\sites.py", line 410, in logout
+    return LogoutView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\views.py", line 137, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\views.py", line 141, in post
+    auth_logout(request)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\auth\__init__.py", line 254, in logout
+    request.session.flush()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 418, in flush
+    self.delete()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 175, in delete
+    self.model.objects.get(session_key=session_key).delete()
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1281, in delete
+    return collector.delete()
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\deletion.py", line 507, in delete
+    signals.post_delete.send(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\dispatch\dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\apps\audit\signals.py", line 65, in log_delete
+    AuditLog.objects.create(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My Documents\Desktop\CodeRepository\InterfaceTestingFramework\.venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: audit_auditlog.ip_address
