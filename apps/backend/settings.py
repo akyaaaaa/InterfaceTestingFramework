@@ -15,6 +15,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'apps.backend',
     'apps.testapi',
+    'apps.audit',  # 审计日志模块
 ]
 DATABASES = {
     'default': {
@@ -70,6 +71,7 @@ TEMPLATES = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'apps.audit.middleware.AuditMiddleware',  # 审计日志中间件
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
